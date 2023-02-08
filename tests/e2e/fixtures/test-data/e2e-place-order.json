@@ -1,0 +1,31 @@
+{
+  "customer": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@vuestorefront.io",
+    "ccNumber": "4111111111111111",
+    "ccName": "John Doe",
+    "ccExpiry": "1225",
+    "ccCode": "123",
+    "address": {
+      "shipping": {
+        "streetName": "1 VueStorefront Rd.",
+        "apartment": "23",
+        "city": "Los Angeles",
+        "state": "California",
+        "country": "United States",
+        "zipcode": "45678",
+        "phone": "123456789"
+      },
+      "billing": {
+        "streetName": "1 VueStorefront Rd.",
+        "apartment": "23",
+        "city": "Los Angeles",
+        "state": "California",
+        "country": "United States",
+        "zipcode": "45678",
+        "phone": "123456789"
+      }
+    }
+  }
+}
