@@ -29,6 +29,7 @@
     "@pinia/nuxt": "0.1.9",
     "@storefront-ui/vue": "0.13.6",
     "@vsf-enterprise/bigcommerce-api": "2.2.1",
+    "@vsf-enterprise/contentstack": "^0.3.5",
     "@vue-storefront/http-cache": "2.7.5",
     "@vue-storefront/middleware": "2.7.5",
     "@vue-storefront/nuxt": "2.7.5",

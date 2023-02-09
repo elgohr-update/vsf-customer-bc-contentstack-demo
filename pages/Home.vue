@@ -102,6 +102,9 @@ import { storeToRefs } from 'pinia';
 
 export default defineComponent({
   name: 'Home',
+  beforeRouteEnter: (_to, _from, next) => {
+    next('/home-page')
+  },
   components: {
     SfHero,
     SfBanner,

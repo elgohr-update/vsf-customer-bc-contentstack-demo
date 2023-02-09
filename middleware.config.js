@@ -30,5 +30,24 @@ module.exports = {
         secureCookies: process.env.NODE_ENV === "production",
       },
     },
+    cnts: {
+      location: '@vsf-enterprise/contentstack/server',
+      configuration: {
+        key: 'blt3091cc6736f3ea7c',
+        token: 'cse12957be26820aac56a2ec8a',
+        env: 'development',
+        live_preview: { // optionally you can add config for live preview
+          management_token: 'csaeb72208244bb7f77e55ce1e',
+          enable: true,
+          host: 'api.contentstack.io',
+        },
+        fetchOptions: {
+          timeout: 30000,
+          retryLimit: 5,
+          retryDelay: 300,
+          retryCondition: (error) => boolean,
+        }
+      },
   },
+},
 };

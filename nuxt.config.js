@@ -15,6 +15,7 @@ const ssrMiddlewareUrl =
     : "http://localhost:8181/";
 
 export default {
+  components: ['~/components/cms/page/', '~/components/cms/layout/'],
   server: {
     port: 3000,
     host: "0.0.0.0",
@@ -73,12 +74,19 @@ export default {
     "@nuxt/typescript-build",
     "@nuxtjs/pwa",
     "@nuxtjs/style-resources",
+    '@vsf-enterprise/contentstack/nuxt',
     [
       "@vue-storefront/nuxt",
       {
         useRawSource: {
-          dev: ["@vue-storefront/core"],
-          prod: ["@vue-storefront/core"],
+          dev: [
+              "@vue-storefront/core",
+              "@vsf-enterprise/contentstack"
+        ],
+          prod: [
+            "@vue-storefront/core",
+            "@vsf-enterprise/contentstack"
+        ],
         },
       },
     ],
@@ -156,10 +164,10 @@ export default {
       { name: "EUR", label: "Euro" },
     ],
     locales: [
-      { code: "en", label: "English", file: "en.js", iso: "en" },
+      { code: "en-us", label: "English", file: "en.js", iso: "en-us" },
       { code: "de", label: "German", file: "de.js", iso: "de" },
     ],
-    defaultLocale: "en",
+    defaultLocale: "en-us",
     autoChangeCookie: {
       currency: false,
       locale: false,
@@ -169,7 +177,7 @@ export default {
     seo: true,
     langDir: "lang/",
     vueI18n: {
-      fallbackLocale: "en",
+      fallbackLocale: "en-us",
       numberFormats: {
         en: {
           currency: {
