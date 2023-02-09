@@ -37,7 +37,7 @@ module.exports = {
         token: 'cse12957be26820aac56a2ec8a',
         env: 'development',
         live_preview: { // optionally you can add config for live preview
-          management_token: 'csaeb72208244bb7f77e55ce1e',
+          management_token: 'csa2645247422d5d1822165cbb',
           enable: true,
           host: 'api.contentstack.io',
         },
