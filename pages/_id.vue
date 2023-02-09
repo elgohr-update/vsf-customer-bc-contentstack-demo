@@ -21,7 +21,7 @@ export default Vue.extend({
     onSSR(async () => {
       await search({
         url: path,
-        locale: 'en-US',
+        locale: 'en-us',
       })
     })
     return {
