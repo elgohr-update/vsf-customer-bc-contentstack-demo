@@ -164,10 +164,10 @@ export default {
       { name: "EUR", label: "Euro" },
     ],
     locales: [
-      { code: "en-us", label: "English", file: "en.js", iso: "en-us" },
+      { code: "en", label: "English", file: "en.js", iso: "en" },
       { code: "de", label: "German", file: "de.js", iso: "de" },
     ],
-    defaultLocale: "en-us",
+    defaultLocale: "en",
     autoChangeCookie: {
       currency: false,
       locale: false,
@@ -177,7 +177,7 @@ export default {
     seo: true,
     langDir: "lang/",
     vueI18n: {
-      fallbackLocale: "en-us",
+      fallbackLocale: "en",
       numberFormats: {
         en: {
           currency: {
