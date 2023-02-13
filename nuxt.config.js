@@ -18,7 +18,7 @@ export default {
   components: ['~/components/cms/page/', '~/components/cms/layout/'],
   server: {
     port: 3000,
-    host: "0.0.0.0",
+    host: process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost'
   },
   publicRuntimeConfig: {
     theme,
