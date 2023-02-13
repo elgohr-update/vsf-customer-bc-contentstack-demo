@@ -7,19 +7,10 @@
     >
       <!-- TODO: add mobile view buttons after SFUI team PR -->
       <template #logo>
-        <nuxt-link :to="localePath({ name: 'home' })" class="sf-header__logo">
-          <SfImage
-            src="/icons/logo.svg"
-            alt="Vue Storefront Next"
-            class="sf-header__logo-image"
-            :width="34"
-            :height="34"
-            @click="closeSearch"
-          />
-        </nuxt-link>
+        <Logo />
       </template>
       <template #navigation>
-        <HeaderNavigation :categories="navigation" />
+        <CmsHeaderNavigation />
       </template>
       <template #aside>
         <div @click="closeSearch" v-if="!isCheckoutPage">
@@ -137,6 +128,8 @@ import { useWishlistStore } from '~/stores/wishlist';
 import { useCartStore } from '~/stores/cart';
 import { useCategory } from '~/composables/useCategory';
 import { useCategoryTreeStore } from '~/stores/categoryTree';
+import CmsHeaderNavigation from '~/components/CmsHeaderNavigation'
+import Logo from '~/components/Logo'
 
 export default defineComponent({
   components: {
@@ -149,7 +142,8 @@ export default defineComponent({
     SfSearchBar,
     SearchResults,
     SfOverlay,
-    HeaderNavigation
+    CmsHeaderNavigation,
+    Logo,
   },
   directives: { clickOutside },
   setup() {

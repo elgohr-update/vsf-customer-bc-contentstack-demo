@@ -44,6 +44,7 @@ import FilterSidebar from '~/components/FilterSidebar.vue';
 import WishlistSidebar from '~/components/WishlistSidebar.vue';
 import LoginModal from '~/components/LoginModal.vue';
 import LazyHydrate from 'vue-lazy-hydration';
+import useCmsLayout from '~/composables/useCmsLayout';
 import Notification from '~/components/Notification.vue';
 import { useCustomerStore } from '~/stores/customer';
 import {
@@ -79,6 +80,7 @@ export default defineComponent({
     const { loadCategoryTreeList } = useCategory();
     const { load: loadChannel } = useChannel();
     const { load: loadUser } = useUser();
+    const { getLayout, styleGuide } = useCmsLayout();
 
     useAsync(() => Promise.all([loadChannel(), loadCategoryTreeList()]));
 
@@ -86,6 +88,7 @@ export default defineComponent({
       await loadUser();
       await loadCart();
       await loadWishlist();
+      await getLayout();
     });
 
     watch(isAuthenticated, () => {
@@ -93,7 +96,8 @@ export default defineComponent({
     });
 
     return {
-      route
+      route, 
+      styleGuide
     };
   },
   head: {
