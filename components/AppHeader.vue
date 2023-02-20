@@ -302,4 +302,9 @@ export default defineComponent({
 .sf-search-bar {
   flex-grow: 0;
 }
+
+.sf-header__logo {
+  --image-width: var(--header-logo-width, 110px);
+  --image-height: var(--header-logo-height, 110px);
+}
 </style>
